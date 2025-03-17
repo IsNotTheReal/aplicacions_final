@@ -13,6 +13,9 @@ services:
       redelamplemp:
         aliases:
           - a23alexandreme.lan
+    env_file:
+      - .env.presta
+
   basededatos:
     image: mysql:latest
     env_file:

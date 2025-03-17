@@ -21,6 +21,8 @@ services:
       - ./php-lemp/php.ini:/etc/php/8.2/fpm/php.ini
     networks:
       redelamplemp:
+    env_file:
+      - .env.presta
 
   basededatos:
     image: mysql:latest

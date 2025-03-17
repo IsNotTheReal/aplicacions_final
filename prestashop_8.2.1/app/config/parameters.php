@@ -1,11 +1,11 @@
 <?php return array (
   'parameters' => 
   array (
-    'database_host' => 'basededatos',
-    'database_port' => '',
-    'database_name' => 'prestashop',
-    'database_user' => 'root',
-    'database_password' => 'abc123..',
+    'database_host' => getenv('HOSTBD'),
+    'database_port' => getenv('PORTBD'),
+    'database_name' => getenv('NAMEBD'),
+    'database_user' => getenv('USERBD'),
+    'database_password' => getenv('PASSBD'),
     'database_prefix' => 'ps_',
     'database_engine' => 'InnoDB',
     'mailer_transport' => 'smtp',
