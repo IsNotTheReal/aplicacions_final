@@ -21,5 +21,5 @@
 
 ## Notas Adicionales
    - A base de datos de prestashop xa está gardada en `basededatos/backup-bd.sql`. Só tes que executar `restore.sh` para restaurala e usar prestashop sen ningún problema.
-   - Arquivo .env
+   - Arquivo .env para a base de datos de desenvolvemento, e .env.presta tanto para producción como para desenvolvemento (Configuración do prestashop).
    ![.env de desenvolvemento](/imaxe-env/env.png)
