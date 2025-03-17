@@ -1,0 +1,13 @@
+services:
+  apache:
+    build: apache-php-lamp-prod
+    ports:
+      - "80:80"
+      - "443:443"
+    volumes:
+      - ./prestashop_8.2.1:/app
+      - ./certs-prod:/certs
+      - ./apache-php-lamp-prod/vhost-apache.conf:/etc/apache2/sites-enabled/vhost-apache.conf
+      - ./apache-php-lamp-prod/php.ini:/etc/php/8.2/apache2/php.ini
+    env_file:
+      - .env.presta

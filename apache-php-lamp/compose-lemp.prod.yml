@@ -1,0 +1,19 @@
+services:
+  nginx:
+    image: nginx:latest
+    ports:
+      - "80:80"
+      - "443:443"
+    volumes:
+      - ./prestashop_8.2.1:/app
+      - ./nginx-lemp-prod/vhost-nginx.conf:/etc/nginx/conf.d/vhost-nginx.conf
+      - ./certs-prod:/certs
+
+  phpserver:
+    build: php-lemp-prod
+    volumes:
+      - ./prestashop_8.2.1:/app
+      - ./php-lemp-prod/php-fpm.conf:/etc/php/8.2/fpm/pool.d/www.conf
+      - ./php-lemp-prod/php.ini:/etc/php/8.2/fpm/php.ini
+    env_file:
+      - .env.presta
