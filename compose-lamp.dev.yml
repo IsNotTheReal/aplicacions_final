@@ -32,7 +32,7 @@ services:
     networks:
       - redelamplemp
     environment:
-    - DISPLAY=192.168.1.102:0
+    - DISPLAY=${DISPLAY}
     volumes:
     - /tmp/.X11-unix:/tmp/.X11-unix
 volumes:
